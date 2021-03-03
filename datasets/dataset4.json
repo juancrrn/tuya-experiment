@@ -1,0 +1,7 @@
+{
+    "setName": "Data set 4",
+    "setComment": "Taken from https://github.com/rospogrigio/localtuya/issues/310.",
+    "setContents": [
+        { "rawDps6": "CVsAAAAAAAA=", "t": null }
+    ]
+}

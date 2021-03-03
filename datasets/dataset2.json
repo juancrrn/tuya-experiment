@@ -1,0 +1,15 @@
+{
+    "setName": "Data set 2",
+    "setComment": "Started with low load, then added heating, then water heater, and then went back to low load.",
+    "setContents": [
+        { "rawDps6": "CMMABMUAAN4=", "t": 1613667803 },
+        { "rawDps6": "CMIABMsAAOE=", "t": 1613667818 },
+        { "rawDps6": "CL0AKB8ACPY=", "t": 1613667833 },
+        { "rawDps6": "CMUAKCMACP4=", "t": 1613667848 },
+        { "rawDps6": "CMQAQJsADn0=", "t": 1613667863 },
+        { "rawDps6": "CMMAQH8ADnU=", "t": 1613667878 },
+        { "rawDps6": "CMsAJ/sACPo=", "t": 1613667893 },
+        { "rawDps6": "CNQABJUAANo=", "t": 1613667908 },
+        { "rawDps6": "CNIABLIAAN0=", "t": 1613667923 }
+    ]
+}

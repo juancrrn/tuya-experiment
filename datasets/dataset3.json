@@ -1,0 +1,16 @@
+{
+    "setName": "Data set 3",
+    "setComment": "Started with normal load, then went to minimum load, and then back to normal load.",
+    "setContents": [
+        { "rawDps6": "COMAAyUAAGw=", "t": 1613670202 },
+        { "rawDps6": "COEAAxQAAGg=", "t": 1613670217 },
+        { "rawDps6": "COAAAxQAAGc=", "t": 1613670232 },
+        { "rawDps6": "COYAAyAAAGU=", "t": 1613670247 },
+        { "rawDps6": "COkAAawAACw=", "t": 1613670262 },
+        { "rawDps6": "COsAAaoAACs=", "t": 1613670277 },
+        { "rawDps6": "CO8AAaQAACs=", "t": 1613670292 },
+        { "rawDps6": "CPAAAS0AACA=", "t": 1613670307 },
+        { "rawDps6": "CPAAAaAAACo=", "t": 1613670322 },
+        { "rawDps6": "COwABQwAARo=", "t": 1613670337 }
+    ]
+}

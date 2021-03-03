@@ -1,0 +1,22 @@
+{
+    "setName": "Data set 6",
+    "setComment": "Related to app values (I (A), P (kW) and V (V)) captured at similar times, with low load.",
+    "setContents": [
+        { "rawDps6": "COEAA8MAAMo=", "t": 1613838513 },
+        { "rawDps6": "COQAA7YAAMg=", "t": 1613838528 },
+        { "rawDps6": "COAAA7oAAMc=", "t": 1613838543 },
+        { "rawDps6": "CN0AA7IAAMY=", "t": 1613838558 },
+        { "rawDps6": "COAAA7IAAMY=", "t": 1613838574 },
+        { "rawDps6": "COIAA7gAAMg=", "t": 1613838589 },
+        { "rawDps6": "CN4AA7QAAMc=", "t": 1613838604 }
+    ],
+    "setAppCaptures": [
+        { "i": 0.956, "p": 0.200, "v": 226.9 },
+        { "i": 0.963, "p": 0.202, "v": 227.3 },
+        { "i": 0.950, "p": 0.200, "v": 227.6 },
+        { "i": 0.954, "p": 0.199, "v": 227.2 },
+        { "i": 0.946, "p": 0.198, "v": 226.9 },
+        { "i": 0.946, "p": 0.198, "v": 227.2 },
+        { "i": 0.952, "p": 0.200, "v": 227.4 }
+    ]
+}

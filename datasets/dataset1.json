@@ -1,0 +1,30 @@
+{
+    "setName": "Data set 1",
+    "setComment": "",
+    "setContents": [
+        { "rawDps6": "COoABCYAAJI=", "t": 1613665298 },
+        { "rawDps6": "COgAA3kAAHQ=", "t": 1613664953 },
+        { "rawDps6": "COcAA2YAAHI=", "t": 1613664968 },
+        { "rawDps6": "COkAA2IAAHU=", "t": 1613664983 },
+        { "rawDps6": "COoAA1oAAHI=", "t": 1613664998 },
+        { "rawDps6": "COsAA2IAAHY=", "t": 1613665013 },
+        { "rawDps6": "COsAAyUAAGw=", "t": 1613665028 },
+        { "rawDps6": "COcAA1sAAHU=", "t": 1613665043 },
+        { "rawDps6": "CPAAA5cAAIc=", "t": 1613665058 },
+        { "rawDps6": "CO0AA3QAAHg=", "t": 1613665073 },
+        { "rawDps6": "CPAAArAAAF0=", "t": 1613665088 },
+        { "rawDps6": "CO8AAqoAAFs=", "t": 1613665103 },
+        { "rawDps6": "CO8ABPkAAPo=", "t": 1613665118 },
+        { "rawDps6": "COkABFMAAN8=", "t": 1613665133 },
+        { "rawDps6": "COoABFkAAN8=", "t": 1613665148 },
+        { "rawDps6": "COIABMoAAPA=", "t": 1613665163 },
+        { "rawDps6": "COMABEwAANs=", "t": 1613665178 },
+        { "rawDps6": "COYABEUAANs=", "t": 1613665193 },
+        { "rawDps6": "COAAArgAAGE=", "t": 1613665208 },
+        { "rawDps6": "COEAAuAAAF0=", "t": 1613665223 },
+        { "rawDps6": "COMAAwMAAGQ=", "t": 1613665238 },
+        { "rawDps6": "COAABFMAAJc=", "t": 1613665253 },
+        { "rawDps6": "COEAA9AAAIU=", "t": 1613665268 },
+        { "rawDps6": "COIAAskAAF0=", "t": 1613665283 }
+    ]
+}

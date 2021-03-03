@@ -1,0 +1,23 @@
+{
+    "setName": "Data set 7",
+    "setComment": "Related to app values (I (A), P (kW) and V (V)) captured at similar times, with high load (> 2000 W).",
+    "setContents": [
+        { "rawDps6": "CN0AJKMACE8=", "t": 1613840508 },
+        { "rawDps6": "CN8AJF0ACEA=", "t": 1613840523 },
+        { "rawDps6": "CN8AJGAACEE=", "t": 1613840538 },
+        { "rawDps6": "CN8AJFUACD4=", "t": 1613840553 },
+        { "rawDps6": "CNsAJHsACEM=", "t": 1613840568 },
+        { "rawDps6": "CNsAJGUACD4=", "t": 1613840583 },
+        { "rawDps6": "CNsAJBwACC8=", "t": 1613840598 }
+    ],
+    "setAppCaptures": [
+        { "i": 9.375, "p": 2.123, "v": 226.7 },
+        { "i": 9.379, "p": 2.127, "v": 226.9 },
+        { "i": 9.309, "p": 2.112, "v": 227.1 },
+        { "i": 9.312, "p": 2.113, "v": 227.1 },
+        { "i": 9.301, "p": 2.110, "v": 227.1 },
+        { "i": 9.339, "p": 2.115, "v": 226.7 },
+        { "i": 9.317, "p": 2.110, "v": 226.7 },
+        { "i": 9.224, "p": 2.095, "v": 226.7 }
+    ]
+}

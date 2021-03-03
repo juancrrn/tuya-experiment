@@ -1,0 +1,63 @@
+body, html {
+    font-family: 'SF Pro Display';
+    background-color: #f1f1f1;
+    color: #111;
+    font-size: 14px;
+}
+
+p {
+    line-height: 1.3em;
+    margin: 10px 0;
+}
+
+span.id {
+    display: inline-block;
+    width: 40px;
+}
+
+span.raw {
+    display: inline-block;
+    color: #888;
+    width: 150px;
+}
+
+span.std {
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+}
+
+span.std.diff {
+    background-color: #c398f2;
+}
+
+span.std.common {
+    background-color: #ccd1e0;
+}
+
+li.test-row, li.occurence-row {
+    margin-bottom: 6px;
+}
+
+span.test-ijl, span.occurence-jl {
+    display: inline-block;
+    width: 85px;
+    color: #999;
+}
+
+span.test-result-yes {
+    background-color: #8eee9e;
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+span.test-bin {
+    display: inline-block;
+    width: 500px;
+}
+
+span.test-dec, span.occurence-n {
+    display: inline-block;
+    width: 200px;
+}
