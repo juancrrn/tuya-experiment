@@ -5,7 +5,7 @@ class Utils
     
     public static function stringToBinaryA7($string): string
     {
-        //$string = base64_encode($string);
+        $string = base64_encode($string);
 
         $l = strlen($string);
         $result = '';
