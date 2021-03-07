@@ -17,12 +17,14 @@ class GlobalExperiment
     private $dataset;
     private $globalStatistics;
     private $changingColumns;
+
+    private const DATASET_PATH = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'datasets' . DIRECTORY_SEPARATOR;
     
     public function __construct(
-        string $jsonDatasetPath,
+        string $jsonDatasetFilename,
         GlobalStatistics $globalStatistics
     ) {
-        $jsonDataset = json_decode(file_get_contents($jsonDatasetPath));
+        $jsonDataset = json_decode(file_get_contents(self::DATASET_PATH . $jsonDatasetFilename));
 
         $this->dataset = new Dataset($jsonDataset);
 
@@ -49,7 +51,7 @@ class GlobalExperiment
 
         if (! empty($this->dataset->getAppCaptures())) {
             foreach ($this->dataset->getAppCaptures() as $cap) {
-                $appCapturesBuf .= '<li>I = ' . $cap->getI() . ', P = ' . $cap->getP() . ', V = ' . $cap->getV() . ', </li>';
+                $appCapturesBuf .= '<li>I = <span class="decimal-figure">' . $cap->getI() . '</span>, P = <span class="decimal-figure">' . $cap->getP() . '</span>, V = <span class="decimal-figure">' . $cap->getV() . '</span></li>';
             }
         }
 
@@ -67,8 +69,11 @@ class GlobalExperiment
                                 <ul>
                                     <li>Name: $datasetName</li>
                                     <li>Comment: $datasetComment</li>
-                                    <li>Contents count: $datasetCountContents</li>
-                                    <li>App captures count: $datasetCountAppCaptures $appCapturesBuf</li>
+                                    <li>Contents count: <span class="decimal-figure">$datasetCountContents</span></li>
+                                    <li>
+                                        App captures count: <span class="decimal-figure">$datasetCountAppCaptures</span>
+                                        $appCapturesBuf
+                                    </li>
                                 </ul>
                             </p>
                         </div>
@@ -160,11 +165,19 @@ class GlobalExperiment
                 $this->globalStatistics
             );
 
+            $buf .= <<< HTML
+            <div class="experiment-row">
+            HTML;
+
             $buf .= $singleValueExperiment->processDifferences();
 
             if ($withSearch) {
                 $buf .= $singleValueExperiment->processSearch($regex, $minLength, $maxLength);
             }
+
+            $buf .= <<< HTML
+            </div>
+            HTML;
 
         }
 

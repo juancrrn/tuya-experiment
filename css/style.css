@@ -1,87 +1,158 @@
+:root {
+    --mono-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --document-background-color: #f1f1f1;
+    --document-text-color: #111;
+    --math-figure-color: #3e66e8;
+    --decimal-figure-color: #8d3ee8;
+    --binary-figure-regex-color: #0a8f6e;
+    --diff-exp-diff-color: #c983e6;
+}
+
 body, html {
-    background-color: #f1f1f1;
-    color: #111;
+    background-color: var(--document-background-color);
+    color: var(--document-text-color);
 }
 
 .math-figure,
 .decimal-figure,
 .binary-figure,
 .details-regex {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-family: var(--mono-font-family);
     font-size: 95.0%;
     word-break: break-word;
 }
 
 .math-figure {
-    color: #3e66e8;
+    color: var(--math-figure-color);
 }
 
 .decimal-figure {
-    color: #8d3ee8;
+    color: var(--decimal-figure-color);
 }
 
 .binary-figure {
-    color: #0a8f6e;
+    color: var(--binary-figure-regex-color);
 }
 
 .details-regex {
-    color: #0a8f6e;
+    color: var(--binary-figure-regex-color);
 }
 
-/*
-p {
-    line-height: 1.3em;
-    margin: 10px 0;
+.experiment-result-wrapper {
+    padding: 16px 32px 32px;
+    overflow-x: auto;
 }
 
-span.id {
+.experiment-header {
     display: inline-block;
-    width: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }
 
-span.raw {
+.experiment-header .id {
     display: inline-block;
-    color: #888;
-    width: 150px;
+    vertical-align: top;
+    background-color: #eee;
+    padding: 4px 12px;
 }
 
-span.std {
+.experiment-header .raw {
+    font-family: var(--mono-font-family);
+    padding: 4px 10px;
     display: inline-block;
-    width: 15px;
-    text-align: center;
+    vertical-align: top;
 }
 
-span.std.diff {
-    background-color: #c398f2;
+.experiment-differences-body {
+    word-break: keep-all;
+    margin: 4px 0 10px;
 }
 
-span.std.common {
-    background-color: #ccd1e0;
+.experiment-differences-body .std,
+.experiment-about-demo .std {
+    font-family: var(--mono-font-family);
+    padding: 1px 1px;
+    border-radius: 3px;
+    margin: 0 1px;
+    border: 1px solid;
 }
 
-li.test-row, li.occurence-row {
+.experiment-differences-body .std.eqcol,
+.experiment-about-demo .std.eqcol {
+    background-color: transparent;
+    border-color: #e0e0e0;
+}
+
+.experiment-differences-body .std.common,
+.experiment-about-demo .std.common {
+    background-color: #83e6d9;
+    border-color: transparent;
+}
+
+.experiment-differences-body .std.diff,
+.experiment-about-demo .std.diff {
+    background-color: var(--diff-exp-diff-color);
+    border-color: transparent;
+}
+
+.experiment-search-row,
+.experiment-search-statistics .occurence-row {
     margin-bottom: 6px;
 }
 
-span.test-ijl, span.occurence-jl {
+.experiment-search-row .test-ijl,
+.experiment-search-statistics .occurence-jl {
+    font-family: var(--mono-font-family);
     display: inline-block;
     width: 85px;
     color: #999;
+    font-size: 70%;
 }
 
-span.test-result-yes {
+.experiment-search-row .test-ijl,
+.experiment-search-statistics .occurence-jl,
+.global-demo-ijl {
+    font-family: var(--mono-font-family);
+    display: inline-block;
+    color: #999;
+    font-size: 70%;
+}
+
+.experiment-search-row .test-result-yes {
+    font-family: var(--mono-font-family);
+    font-size: 95.0%;
     background-color: #8eee9e;
     display: inline-block;
     padding: 0 4px;
     border-radius: 5px;
 }
 
-span.test-bin {
+.experiment-search-row .test-bin {
+    font-family: var(--mono-font-family);
+    font-size: 95.0%;
     display: inline-block;
+    vertical-align: top;
     width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--binary-figure-regex-color);
 }
 
-span.test-dec, span.occurence-n {
+.experiment-search-row .test-dec {
+    font-family: var(--mono-font-family);
+    font-size: 95.0%;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--decimal-figure-color);
+}
+
+.experiment-search-row .occurence-n {
     display: inline-block;
     width: 200px;
-}*/
+}

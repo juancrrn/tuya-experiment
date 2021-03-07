@@ -1,10 +1,3 @@
-<?php
-
-require_once __DIR__ . '/app/GlobalStatistics.php';
-require_once __DIR__ . '/app/GlobalExperiment.php';
-require_once __DIR__ . '/app/Utils.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -32,6 +25,10 @@ include __DIR__ . '/templates/experimentExecution.php';
 include __DIR__ . '/templates/statistics.php';
 		
 		?>
+
+		<div class="my-5">
+			<p class="text-center">Made with ❤ by <a href="https://juancrrn.io" target="_blank">Juan Carrión</a></p>
+		</div>
 		
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

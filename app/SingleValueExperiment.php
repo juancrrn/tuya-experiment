@@ -62,9 +62,11 @@ class SingleValueExperiment
         $currentValue = $this->currentValue;
 
         $buf .= <<< HTML
-        <p>
+        <div class="experiment-header">
             <span class="id">$experimentId</span>
             <span class="raw">$currentValue</span>
+        </div>
+        <div class="experiment-differences-body">
         HTML;
 
         /*
@@ -99,7 +101,7 @@ class SingleValueExperiment
         }
     
         $buf .= <<< HTML
-        </p>
+        </div>
         HTML;
 
         return $buf;
@@ -130,7 +132,8 @@ class SingleValueExperiment
         $currentValue = $this->currentValue;
 
         $buf .= <<< HTML
-        <p>
+        <div class="experiment-search-body">
+            <ul>
         HTML;
 
         /*
@@ -175,11 +178,11 @@ class SingleValueExperiment
                         $count = count($matches);
 
                         $buf .= <<< HTML
-                        <li class="test-row">
+                        <li class="experiment-search-row">
                             <span class="test-ijl">[$experimentId, $char, $length]</span>
                             <span class="test-bin">$currentBinString</span>
                             <span class="test-dec">$currentDecimal</span>
-                            <span class="test-result-yes">PASS ($count)</span>
+                            <span class="test-result-yes">Pass ($count found)</span>
                         </li>
                         HTML;
 
@@ -190,7 +193,8 @@ class SingleValueExperiment
         }
     
         $buf .= <<< HTML
-        </p>
+            </ul>
+        </div>
         HTML;
 
         return $buf;
