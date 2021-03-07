@@ -28,7 +28,7 @@
                     <h5 class="card-title">Voltage (V)</h5>
                     <h6 class="card-subtitle mb-2 text-muted">E. g. <span class="decimal-figure">225.8</span></h6>
                     <p class="card-text">If represented as <span class="decimal-figure">2258</span> (<span class="math-figure">V * 10</span>) (<span class="binary-figure">100011010010</span>), requires at least 13 bits (from <span class="decimal-figure">0000</span> to <span class="decimal-figure">5000</span>, at least; in pure binary representation without point).</p>
-                    <p class="card-text"><small>Allowed standard range in Spain goes from <span class="decimal-figure">220.0</span> to <span class="decimal-figure">240.0</span>.</small></p>
+                    <p class="card-text"><small>Allowed standard range in Spain goes from <span class="decimal-figure">213.9</span> to <span class="decimal-figure">246.1</span> (<span class="decimal-figure">230.0 ± 10 %</span>), but estimated real values go from <span class="decimal-figure">226.0</span> to <span class="decimal-figure">230.0</span>.</small></p>
                 </div>
             </div>
         </div>
