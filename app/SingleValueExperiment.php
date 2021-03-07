@@ -82,21 +82,53 @@ class SingleValueExperiment
 
             $this->globalStatistics->differenceCharRunsPlus();
 
-            if ($char < count($lastBinChars) && $lastBinChars[$char] != $currentBinChars[$char]) {
+            /*
+             * Highlightint mode.
+             */
+            if (TE_HIGHLIGHT_MODE == true) {
                 /*
-                 * If there is an element to compare to and they are different.
+                 * true: highlight differences between one row and the previous one.
                  */
-                $buf .= '<span class="std diff">' . $currentBinChars[$char] . '</span>';
-            } elseif (in_array($char, $this->changingColumns)) {
-                /*
-                 * If the column changes in at least one position.
-                 */
-                $buf .= '<span class="std common">' . $currentBinChars[$char] . '</span>';
+
+                if ($char < count($lastBinChars) && $lastBinChars[$char] != $currentBinChars[$char]) {
+                    /*
+                    * If there is an element to compare to and they are different.
+                    */
+                    $buf .= '<span class="std diff">' . $currentBinChars[$char] . '</span>';
+                } elseif (in_array($char, $this->changingColumns)) {
+                    /*
+                    * If the column changes in at least one position.
+                    */
+                    $buf .= '<span class="std common">' . $currentBinChars[$char] . '</span>';
+                } else {
+                    /*
+                    * If the column does never change.
+                    */
+                    $buf .= '<span class="std eqcol">' . $currentBinChars[$char] . '</span>';
+                }
+
             } else {
                 /*
-                 * If the column does never change.
+                 * false: highlight 1-valued bits not in not-changing columns.
                  */
-                $buf .= '<span class="std eqcol">' . $currentBinChars[$char] . '</span>';
+
+                if ($currentBinChars[$char] == '1' && in_array($char, $this->changingColumns)) {
+                    /*
+                    * If there is an element to compare to and they are different.
+                    */
+                    $buf .= '<span class="std diff">' . $currentBinChars[$char] . '</span>';
+                } elseif (in_array($char, $this->changingColumns)) {
+                    /*
+                    * If the column changes in at least one position.
+                    */
+                    $buf .= '<span class="std common">' . $currentBinChars[$char] . '</span>';
+                } else {
+                    /*
+                    * If the column does never change.
+                    */
+                    $buf .= '<span class="std eqcol">' . $currentBinChars[$char] . '</span>';
+                }
+
             }
         }
     

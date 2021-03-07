@@ -7,6 +7,15 @@
 define('TE_DATASET_FILENAME', 'dataset7.json');
 
 /**
+ * Bit highlighting:
+ * - true: highlight differences between one row and the previous one.
+ * - false: highlight 1-valued bits not in not-changing columns.
+ * Column-based highlights are always applied.
+ */
+
+define('TE_HIGHLIGHT_MODE', false);
+
+/**
  * Some regular expressions for testing.
  */
 
