@@ -1,0 +1,21 @@
+{
+    "setName": "Data set 8 (6 and 7 joined)",
+    "setComment": "Datasets 6 and 7 joined. 1 to 7 are dataset 6 (low load, < 300 W) and 8 to 14 are dataset 7 (high load, > 2000 W).",
+    "setContents": [
+        { "rawDps6": "COEAA8MAAMo=", "t": 1613838513 },
+        { "rawDps6": "COQAA7YAAMg=", "t": 1613838528 },
+        { "rawDps6": "COAAA7oAAMc=", "t": 1613838543 },
+        { "rawDps6": "CN0AA7IAAMY=", "t": 1613838558 },
+        { "rawDps6": "COAAA7IAAMY=", "t": 1613838574 },
+        { "rawDps6": "COIAA7gAAMg=", "t": 1613838589 },
+        { "rawDps6": "CN4AA7QAAMc=", "t": 1613838604 },
+
+        { "rawDps6": "CN0AJKMACE8=", "t": 1613840508 },
+        { "rawDps6": "CN8AJF0ACEA=", "t": 1613840523 },
+        { "rawDps6": "CN8AJGAACEE=", "t": 1613840538 },
+        { "rawDps6": "CN8AJFUACD4=", "t": 1613840553 },
+        { "rawDps6": "CNsAJHsACEM=", "t": 1613840568 },
+        { "rawDps6": "CNsAJGUACD4=", "t": 1613840583 },
+        { "rawDps6": "CNsAJBwACC8=", "t": 1613840598 }
+    ]
+}
