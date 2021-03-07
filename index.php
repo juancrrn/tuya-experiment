@@ -9,67 +9,32 @@ require_once __DIR__ . '/app/Utils.php';
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Tuya Smart WiFi meter data decoding experiment</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
+
+		<title>Tuya Smart WiFi meter data decoding experiment</title>
 	</head>
 	<body>
-		<h1>Tuya Smart WiFi meter data decoding experiment</h1>
+		<nav class="navbar navbar-light bg-light shadow-sm">
+  			<span class="navbar-brand mb-0 h1">Tuya Smart WiFi meter data decoding experiment</span>
+		</nav>
 
-		<?php include __DIR__ . '/templates/dataWeAreLookingFor.php'; ?>
-
-		<p><strong>About the following tables</strong></p>
-
-		<ul>
-			<li><span class="std eqcol">1</span> (no color): the value never changes in the column.</li>
-			<li><span class="std common">1</span> (gray): the value changes some time in the column.</li>
-			<li><span class="std diff">1</span> (purple): the value is different to the one in the previous row.</li>
-		</ul>
 		<?php
+		
+include __DIR__ . '/templates/dataWeAreLookingFor.php';
 
-$globalStatistics = new GlobalStatistics();
+include __DIR__ . '/templates/aboutTheFollowingTables.php';
 
-$experiment = new GlobalExperiment(
-	'D:\dprogramfiles64\Wamp\www\tuya-experiment\datasets\dataset7.json',
-	$globalStatistics
-);
+include __DIR__ . '/templates/experimentExecution.php';
 
-echo $experiment->processDifferences(true, Utils::REGEX_RAW_DATA_7_POWER, 8, 63, $globalStatistics);
-
+include __DIR__ . '/templates/statistics.php';
+		
 		?>
-		<p><strong>Statistics</strong></p>
-
-		<ul>
-			<li>Run complete.</li>
-			<li>
-				Difference experiment
-				<ul>
-					<li>Tested chars count: <?php echo $globalStatistics->getDifferenceCharRuns(); ?>.</li>
-				</ul>
-			</li>
-			<li>
-				Search experiment
-				<ul>
-					<li>Tested strings count: <?php echo $globalStatistics->getSearchRuns(); ?>.</li>
-					<li>Found matches count: <?php echo $globalStatistics->getSearchMatchesN(); ?>.</li>
-					<li>
-						Starting-position-length count:
-						<ul>
-							<?php
-
-foreach ($globalStatistics->getSearchOccurencesMap() as $occurence) {
-
-	echo '<li class="occurence-row"><span class="occurence-jl">[i, ' . $occurence->startPosition . ', ' . $occurence->length . ']</span><span class="occurence-n">' . $occurence->nOccurences . '</span></li>';
-
-}
-
-							?>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>

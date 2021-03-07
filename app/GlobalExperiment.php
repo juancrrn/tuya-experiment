@@ -55,7 +55,7 @@ class GlobalExperiment
         $appCapturesBuf .= '</ol>';
 
         $buf = <<< HTML
-        <p><strong>Run</strong></p>
+        <p><strong>Execution details</strong></p>
         <ul>
             <li>
                 Dataset
