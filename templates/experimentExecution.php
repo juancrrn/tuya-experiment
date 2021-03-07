@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../app/GlobalStatistics.php';
 require_once __DIR__ . '/../app/GlobalExperiment.php';
 require_once __DIR__ . '/../app/Utils.php';
