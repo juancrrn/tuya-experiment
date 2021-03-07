@@ -1,6 +1,13 @@
 <?php
 
-require_once __DIR__ . '/config.php';
+/**
+ * Check that config.php file exists.
+ */
+if (file_exists(__DIR__ . '/config.php')) {
+	require_once __DIR__ . '/config.php';
+} else {
+	die('Copy config.sample.php to config.php.');
+}
 
 /**
  * URL query search setting override.
