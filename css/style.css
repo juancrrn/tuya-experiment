@@ -13,6 +13,11 @@ body, html {
     color: var(--document-text-color);
 }
 
+.meter-picture {
+    max-width: 150px;
+    width: 100%;
+}
+
 .math-figure,
 .decimal-figure,
 .binary-figure,

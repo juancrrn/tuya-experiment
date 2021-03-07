@@ -37,9 +37,18 @@ if (isset($_GET['search'])) {
 	<body>
 		<nav class="navbar navbar-light bg-light shadow-sm">
   			<span class="navbar-brand mb-0 h1">Tuya Smart WiFi meter data decoding experiment</span>
+			<div id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/juancrrn/tuya-experiment" target="_blank">GitHub repo</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
 		<?php
+		
+include __DIR__ . '/templates/device.php';
 		
 include __DIR__ . '/templates/dataWeAreLookingFor.php';
 
