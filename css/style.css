@@ -1,5 +1,5 @@
 :root {
-    --mono-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --mono-font-family: var(--font-family-monospace);
     --document-background-color: #f1f1f1;
     --document-text-color: #111;
     --math-figure-color: #3e66e8;
@@ -45,10 +45,17 @@ a.title-hash-link {
 .experiment-result-wrapper {
     padding: 16px 32px 32px;
     overflow-x: auto;
+    text-align: center;
+}
+
+.experiment-row {
+    white-space: nowrap;
+    margin: 4px 0 10px;
 }
 
 .experiment-header {
     display: inline-block;
+    vertical-align: middle; 
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
@@ -59,18 +66,26 @@ a.title-hash-link {
     vertical-align: top;
     background-color: #eee;
     padding: 4px 12px;
+    width: 50px;
+    text-align: center;
+    font-family: var(--mono-font-family);
+    font-size: 90%;
 }
 
 .experiment-header .raw {
-    font-family: var(--mono-font-family);
     padding: 4px 10px;
     display: inline-block;
     vertical-align: top;
+    width: 130px;
+    text-align: center;
+    font-family: var(--mono-font-family);
+    font-size: 90%;
 }
 
 .experiment-differences-body {
     word-break: keep-all;
-    margin: 4px 0 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .experiment-differences-body .std,
