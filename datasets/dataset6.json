@@ -1,6 +1,6 @@
 {
     "setName": "Data set 6",
-    "setComment": "Related to app values (I (A), P (kW) and V (V)) captured at similar times, with low load.",
+    "setComment": "Related to app values (I (A), P (kW) and V (V)) captured at similar times, with low load (< 300 W).",
     "setContents": [
         { "rawDps6": "COEAA8MAAMo=", "t": 1613838513 },
         { "rawDps6": "COQAA7YAAMg=", "t": 1613838528 },
