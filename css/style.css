@@ -115,6 +115,11 @@ a.title-hash-link {
     border-color: transparent;
 }
 
+.experiment-search-body ul {
+    display: inline-block;
+    text-align: left;
+}
+
 .experiment-search-row,
 .experiment-search-statistics .occurence-row {
     margin-bottom: 6px;
