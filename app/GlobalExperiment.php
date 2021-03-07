@@ -15,6 +15,7 @@ class GlobalExperiment
      * @var array            $changingColumns
      */
     private $dataset;
+    private $globalStatistics;
     private $changingColumns;
     
     public function __construct(
@@ -40,9 +41,9 @@ class GlobalExperiment
         $datasetCountContents = $this->dataset->countContents();
         $datasetCountAppCaptures = $this->dataset->countAppCaptures();
         $searchEnabled = $withSearch ? 'yes' : 'no';
-        $regexLi = $withSearch ? "<li>Regular expression: $regex</li>" : '';
-        $minLengthLi = $withSearch ? "<li>Min. length: $minLength</li>" : '';
-        $maxLengthLi = $withSearch ? "<li>Max. length: $maxLength</li>" : '';
+        $regexLi = $withSearch ? '<li>Regular expression: <span class="details-regex">' . $regex . '</span></li>' : '';
+        $minLengthLi = $withSearch ? '<li>Min. length: <span class="decimal-figure">' . $minLength . '</span></li>' : '';
+        $maxLengthLi = $withSearch ? '<li>Max. length: <span class="decimal-figure">' . $maxLength . '</span></li>' : '';
 
         $appCapturesBuf = '<ol>';
 
@@ -55,28 +56,55 @@ class GlobalExperiment
         $appCapturesBuf .= '</ol>';
 
         $buf = <<< HTML
-        <p><strong>Execution details</strong></p>
-        <ul>
-            <li>
-                Dataset
-                <ul>
-                    <li>Name: $datasetName</li>
-                    <li>Comment: $datasetComment</li>
-                    <li>Contents count: $datasetCountContents</li>
-                    <li>App captures count: $datasetCountAppCaptures $appCapturesBuf</li>
-                </ul>
-            </li>
-            <li>
-                Settings
-                <ul>
-                    <li>Character to binary function: <code>ord()</code>and <code>decbin()</code> with padding to 7 bits (<code>Utils::stringToBinaryA7()</code>)
-                    <li>Search enabled: $searchEnabled</li>
-                    $regexLi
-                    $minLengthLi
-                    $maxLengthLi
-                </ul>
-            </li>
-        </ul>
+        <div class="container mt-4 mb-3">
+            <h5 class="mb-4">Execution details</h5>
+            <div class="row mb-3">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dataset</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Name: $datasetName</li>
+                                    <li>Comment: $datasetComment</li>
+                                    <li>Contents count: $datasetCountContents</li>
+                                    <li>App captures count: $datasetCountAppCaptures $appCapturesBuf</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Settings</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Character to binary function: <code>ord()</code>and <code>decbin()</code> with padding to 7 bits (<code>Utils::stringToBinaryA7()</code>)
+                                    <li>Search enabled: $searchEnabled</li>
+                                    $regexLi
+                                    $minLengthLi
+                                    $maxLengthLi
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5 class="mb-4">Execution result</h5>
+        </div>
+        <div class="experiment-result-wrapper">
+        HTML;
+
+        return $buf;
+    }
+
+    private function generatePostInfo(): string
+    {
+        $buf = '';
+
+        $buf = <<< HTML
+        </div>
         HTML;
 
         return $buf;
@@ -139,6 +167,8 @@ class GlobalExperiment
             }
 
         }
+
+        $buf .= $this->generatePostInfo();
 
         return $buf;
     }
