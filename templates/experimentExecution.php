@@ -17,6 +17,15 @@ $experiment = new GlobalExperiment(
 </div>
 <?php
 
-echo $experiment->processDifferences(TE_SEARCH_ENABLE, TE_SEARCH_REGEX, TE_SEARCH_MIN_LENGTH, TE_SEARCH_MAX_LENGTH, $globalStatistics);
+/**
+ * URL query search setting override.
+ */
+if (TE_SEARCH_ENABLE_OVERRIDE) {
+	$searchEnabled = TE_SEARCH_ENABLE_OVERRIDE;
+} else {
+	$searchEnabled = TE_SEARCH_ENABLE;
+}
+
+echo $experiment->processDifferences($searchEnabled, TE_SEARCH_REGEX, TE_SEARCH_MIN_LENGTH, TE_SEARCH_MAX_LENGTH, $globalStatistics);
 
 ?>

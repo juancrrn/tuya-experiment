@@ -2,6 +2,19 @@
 
 require_once __DIR__ . '/config.php';
 
+/**
+ * URL query search setting override.
+ */
+if (isset($_GET['search'])) {
+	if ($_GET['search'] == 'override') {
+		define('TE_SEARCH_ENABLE_OVERRIDE', true);
+	} else {
+		define('TE_SEARCH_ENABLE_OVERRIDE', false);
+	}
+} else {
+	define('TE_SEARCH_ENABLE_OVERRIDE', false);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
