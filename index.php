@@ -28,6 +28,13 @@ if (isset($_GET['search'])) {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<meta property="og:title" content="Tuya Smart WiFi meter data decoding experiment">
+		<meta property="og:site_name" content="Juan Carrión">
+		<meta property="og:url" content="https://sqa1g.juancrrn.io/tuya-experiment/">
+		<meta property="og:description" content="Experiment app to decode the data sent by the Tuya Smart WiFi meter. Written in PHP.">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://sqa1g.juancrrn.io/tuya-experiment/img/execution-result-preview.jpg">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
