@@ -38,6 +38,10 @@ body, html {
     color: var(--binary-figure-regex-color);
 }
 
+a.title-hash-link {
+    margin-right: 12px;
+}
+
 .experiment-result-wrapper {
     padding: 16px 32px 32px;
     overflow-x: auto;

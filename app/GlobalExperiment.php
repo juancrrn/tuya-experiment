@@ -58,8 +58,8 @@ class GlobalExperiment
         $appCapturesBuf .= '</ol>';
 
         $buf = <<< HTML
-        <div class="container mt-4 mb-3">
-            <h5 class="mb-4">Execution details</h5>
+        <div id="execution-details" class="container mt-4 mb-3">
+            <h5 class="mb-4"><a href="#execution-details" class="title-hash-link">#</a>Execution details</h5>
             <div class="row mb-3">
                 <div class="col-md">
                     <div class="card">
@@ -96,7 +96,8 @@ class GlobalExperiment
                     </div>
                 </div>
             </div>
-            <h5 class="mb-4">Execution result</h5>
+            <span id="execution-result"></span>
+            <h5 class="mb-4"><a href="#execution-result" class="title-hash-link">#</a>Execution result</h5>
         </div>
         <div class="experiment-result-wrapper">
         HTML;
