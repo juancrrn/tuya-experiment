@@ -70,6 +70,51 @@ class Utils
 
         return $result;   
     }
+
+    public static function stringToBinaryD(string $string): string
+    {
+        /**
+         * 1.1. Ensure that the string is UTF-8-encoded.
+         * 
+         * 1.2. Convert the string to ASCII encoding.
+         * 
+         * 2. Convert each character of the string to a number between 0 and
+         * 255 (format code 'C' with repeater argument '*'). This is an
+         * interpretation of the character as an unsigned integer in that
+         * range. Other formats are available at the PHP Manual:
+         *
+         * https://www.php.net/manual/en/function.pack.php
+         * 
+         * The result of unpack() is an array containing the representations
+         * of all the characters. E. g., for 'COEAA8MAAMo=':
+         * 
+         * [67, 79, 69, 65, 65, 56, 77, 65, 65, 77, 111, 61]
+         */
+        $byteArray = unpack('C*', base64_decode(mb_convert_encoding(utf8_encode($string), 'ASCII')));
+
+        /**
+         * 3. Prepare a variable to store the concatenated string.
+         */
+        $result = '';
+
+        /**
+         * 4. Loop through each representation.
+         */
+        foreach ($byteArray as $byte) {
+            /**
+             * 5. Convert the representation from 0 to 255, to a pure binary
+             * representation.
+             * 
+             * 6. As 8 bits are needed to represent the range 0 to 255, pad
+             * the binary representation with leading 0s.
+             * 
+             * 7. Add the representation to the result string.
+             */
+            $result .= str_pad(decbin($byte), 8, '0', STR_PAD_LEFT);
+        }
+
+        return $result;   
+    }
 }
 
 ?>
