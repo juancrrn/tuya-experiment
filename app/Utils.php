@@ -46,7 +46,6 @@ class Utils
          * [67, 79, 69, 65, 65, 56, 77, 65, 65, 77, 111, 61]
          */
         $byteArray = unpack('C*', utf8_encode($string));
-            var_dump($byteArray);
 
         /**
          * 3. Prepare a variable to store the concatenated string.
