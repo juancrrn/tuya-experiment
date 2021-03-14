@@ -2,6 +2,11 @@
 
 class Utils
 {
+
+    public static function stringToBinary(string $string): string
+    {
+        return self::stringToBinaryC($string, true);
+    }
     
     public static function stringToBinaryA7(string $string): string
     {
