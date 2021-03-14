@@ -43,8 +43,8 @@ class SingleValueExperiment
         /*
          * Convert the values to binary strings.
          */
-        $currentBinValue = Utils::stringToBinaryA7($this->currentValue);
-        $lastBinValue = Utils::stringToBinaryA7($this->lastValue);
+        $currentBinValue = Utils::stringToBinary($this->currentValue);
+        $lastBinValue = Utils::stringToBinary($this->lastValue);
 
         /*
          * Separate binary bits to an array.
@@ -147,7 +147,7 @@ class SingleValueExperiment
         /*
          * Convert the value to a binary string.
          */
-        $currentBinValue = Utils::stringToBinaryA7($this->currentValue);
+        $currentBinValue = Utils::stringToBinary($this->currentValue);
 
         /*
          * Separate binary bits to an array.

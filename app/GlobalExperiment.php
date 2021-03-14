@@ -85,7 +85,7 @@ class GlobalExperiment
                             <h5 class="card-title">Settings</h5>
                             <p class="card-text">
                                 <ul>
-                                    <li>Character to binary function: <code>ord()</code>and <code>decbin()</code> with padding to 7 bits (<code>Utils::stringToBinaryA7()</code>)
+                                    <li>Character to binary function: Base64 decode, unsigned integer unpack and padding to 8 bits (<code>Utils::stringToBinaryC()</code>)
                                     <li>Search enabled: $searchEnabled</li>
                                     $regexLi
                                     $minLengthLi
@@ -211,8 +211,8 @@ class GlobalExperiment
             /*
              * Convert the values to binary strings.
              */
-            $currentBinValue = Utils::stringToBinaryA7($datasetContents[$obs]->getRawDps6());
-            $lastBinValue = Utils::stringToBinaryA7($lastValue->getRawDps6());
+            $currentBinValue = Utils::stringToBinary($datasetContents[$obs]->getRawDps6());
+            $lastBinValue = Utils::stringToBinary($lastValue->getRawDps6());
 
             /*
              * Separate binary bits to an array.
