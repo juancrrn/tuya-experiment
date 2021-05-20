@@ -79,6 +79,48 @@ class Utils
 
         return $result;   
     }
+
+    private static function decimalPad(float $number, int $zeros): string
+    {
+        $parts = explode('.', $number);
+
+        if (count($parts) == 1) {
+            $string = $number . '.';
+
+            for ($i = 0; $i < $zeros; $i++) {
+                $string .= '0';
+            }
+            
+            return $string;
+        } elseif (count($parts) == 2) {
+            $string = $parts[0] . '.' . $parts[1];
+
+            for ($i = 0; $i < $zeros - strlen($parts[1]); $i++) {
+                $string .= '0';
+            }
+            
+            return $string;
+        } else {
+            throw new InvalidArgumentException();
+        }
+        //$intPart = floor($number);
+        //$decPart = $number - $intPart;
+    }
+
+    public static function finalRawToInfoDecode(string $string): string
+    {
+        $binaryString = self::stringToBinaryC($string, true);
+
+        $dataVoltage = self::decimalPad(bindec(substr($binaryString, 0, 16)) / 10, 1);
+        $dataCurrent = self::decimalPad(bindec(substr($binaryString, 16, 24)) / 1000, 3);
+        $dataPower = self::decimalPad(bindec(substr($binaryString, 40, 24)) / 1000, 3);
+
+        return <<< HTML
+        <div class="data-voltage"><span class="letter">V</span><span class="value">$dataVoltage V</span></div>
+        <div class="data-current"><span class="letter">I</span><span class="value">$dataCurrent A</span></div>
+        <div class="data-power"><span class="letter">P</span><span class="value">$dataPower kW</span></div>
+        HTML;
+    }
 }
 
 ?>

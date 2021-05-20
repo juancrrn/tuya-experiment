@@ -6,6 +6,7 @@
     --decimal-figure-color: #8d3ee8;
     --binary-figure-regex-color: #0a8f6e;
     --diff-exp-diff-color: #c983e6;
+    --final-decode-letter: #e2ff95;
 }
 
 body, html {
@@ -118,6 +119,39 @@ a.title-hash-link {
 .experiment-about-demo .std.diff {
     background-color: var(--diff-exp-diff-color);
     border-color: transparent;
+}
+
+.experiment-final-decoding {
+    margin: 6px 0 32px;
+}
+
+.experiment-final-decoding .data-voltage, .experiment-final-decoding .data-current, .experiment-final-decoding .data-power {
+    display: inline-block;
+    margin-right: 0 12px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.experiment-final-decoding .letter {
+    display: inline-block;
+    vertical-align: top;
+    background-color: var(--final-decode-letter);
+    padding: 4px 12px;
+    text-align: center;
+    font-family: var(--mono-font-family);
+    font-size: 90%;
+}
+
+.experiment-final-decoding .value {
+    padding: 4px 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 90px;
+    text-align: right;
+    font-family: var(--mono-font-family);
+    font-size: 90%;
 }
 
 .experiment-search-body ul {

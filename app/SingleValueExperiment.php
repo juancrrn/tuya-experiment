@@ -131,8 +131,13 @@ class SingleValueExperiment
 
             }
         }
+
+        $decodedInfo = Utils::finalRawToInfoDecode($this->currentValue);
     
         $buf .= <<< HTML
+        </div>
+        <div class="experiment-final-decoding">
+            $decodedInfo
         </div>
         HTML;
 
